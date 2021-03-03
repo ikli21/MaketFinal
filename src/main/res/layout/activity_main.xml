@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main" />
+
+    <TextView
+        android:fontFamily="@font/alegreyabolditalic"
+        android:id="@+id/meat_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:layout_marginTop="80dp"
+        android:text="@string/some_id"
+        android:textAppearance="@style/some_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:fontFamily="@font/alegreyabolditalic"
+        android:id="@+id/farm_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+
+        android:text="@string/farm"
+        android:textAppearance="@style/farm_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meat_id" />
+
+    <TextView
+        android:fontFamily="@font/alegreyabolditalic"
+        android:id="@+id/trad_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center_horizontal|top"
+        android:text="@string/oldtrad"
+        android:textAppearance="@style/old_traditions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farm_id" />
+
+    <!--
+      Font family: Alegreya
+      Line height: 24sp
+    -->
+    <!-- styles.xml -->
+
+
+    <!--
+      Font family: Alegreya
+      Line height: 65sp
+    -->
+    <!-- styles.xml -->
+
+
+    <!--
+      Font family: Alegreya
+      Line height: 33sp
+      (identical to box height)
+    -->
+    <!-- styles.xml -->
+
+
+
+    <!-- strings.xml -->
+    <Button
+        android:id="@+id/main_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttons"
+        android:textAllCaps="false"
+        android:text="Начнем"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="@font/alegreyabolditalic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="openTrue"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </Button>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/shapegrad" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrueScreen"
+    android:background="#1C1C1C">
+
+
+    <View
+        android:id="@+id/avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/avatar"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewSwinBot"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/swine_id"
+        app:layout_constraintEnd_toEndOf="@+id/swine_id"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/some_id"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:background="@android:color/white"-->
+<!--        android:clipToOutline="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent" >-->
+<!--        <TextView-->
+<!--            android:id="@+id/some_id"-->
+<!--            android:layout_width="73dp"-->
+<!--            android:layout_height="33dp"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginTop="27dp"-->
+<!--            android:text="@string/some_id"-->
+<!--            android:textAppearance="@style/some_id"-->
+<!--            android:gravity="top"-->
+<!--            />-->
+
+<!--        &lt;!&ndash;-->
+<!--          Font family: Alegreya-->
+<!--          Line height: 33sp-->
+<!--          (identical to box height)-->
+<!--        &ndash;&gt;-->
+<!--        &lt;!&ndash; styles.xml &ndash;&gt;-->
+<!--        <style name="some_id">-->
+
+<!--            <item name="android:textSize">-->
+<!--                24sp-->
+<!--            </item>-->
+
+<!--            <item name="android:textColor">-->
+<!--                #1B1420-->
+<!--            </item>-->
+
+<!--        </style>-->
+
+    <View
+        android:id="@+id/viewSwinBot2"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/swine_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewSwinBot" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pill"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewSwinBot2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/swine_id"
+        app:layout_constraintTop_toTopOf="@+id/swine_id">
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="#F48D86"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="40dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pilula" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="3"
+            android:minLines="3"
+            android:text="3 \n млн.\nпродаж"
+            android:padding="0dp"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textColor="@color/textblack"
+            android:fontFamily="@font/alegreyabolditalic"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/list_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true"
+
+        android:background="@drawable/botback"
+        android:paddingTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/lowerpanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewSwinBot">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_meat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="32dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="32dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_category" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/lowerpanel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:background="@drawable/shapelower"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        android:id="@+id/swine_id"
+        android:layout_width="300dp"
+        android:layout_height="357dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shapebackgr"
+        app:layout_constraintBottom_toTopOf="@+id/list_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vt"
+
+
+        tools:showIn="@layout/activity_screen_true">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/layout_category"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/hitofsell"
+            android:layout_width="250dp"
+            android:layout_height="47dp"
+            android:fontFamily="@font/alegreyabolditalic"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:text="Хит продаж"
+            android:textAppearance="@style/sus_oy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include" />
+
+        <!--
+          Font family: Alegreya
+          Line height: 49sp
+        -->
+        <!-- styles.xml -->
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:fontFamily="@font/alegreyabolditalic"
+        android:id="@+id/vt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:gravity="top"
+        android:text="Главное"
+        android:textAppearance="@style/some_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--
+      Font family: Alegreya
+      Line height: 33sp
+      (identical to box height)
+    -->
+    <!-- styles.xml -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

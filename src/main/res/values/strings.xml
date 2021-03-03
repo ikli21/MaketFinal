@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Maket</string>
+    <string name="some_id">
+
+       Мясная
+    </string>
+    <string name="farm">Ферма</string>
+    <string name="oldtrad">Традиции производства - залог качества</string>
+</resources>

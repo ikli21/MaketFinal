@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoryActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/addproductButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/samletext"
+        app:spanCount="2" />
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:fontFamily="@font/alegreyabolditalic"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Категория"
+        android:textAllCaps="true"
+        android:layout_marginTop="34dp"
+        android:textAppearance="@style/some_id"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:fontFamily="@font/alegreyabolditalic"
+        android:id="@+id/samletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Легендарная"
+        android:textAllCaps="true"
+        android:layout_marginTop="15dp"
+        android:textSize="14sp"
+        android:textAppearance="@style/some_id"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTV"
+        />
+
+    <Button
+        android:id="@+id/addproductButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttons"
+        android:text="Добавить продукт"
+        android:onClick="GoToAdd"
+        android:fontFamily="@font/alegreyabolditalic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductActivity">
+
+    <TextView
+        android:id="@+id/priceTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:layout_marginTop="30dp"
+        android:textSize="40dp"
+        android:text="CumCumCum"
+        android:textColor="#F2695F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/alegreyabolditalic"/>
+    <TextView
+        android:id="@+id/sometv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+
+        android:text="Вкус детства"
+        android:textColor="#939393"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/priceTV"
+        android:fontFamily="@font/alegreyabolditalic"/>
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="match_parent"
+        android:minHeight="200dp"
+        android:maxLines="1"
+        android:fontFamily="@font/alegreyabolditalic"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="sas"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+    android:autoSizeMaxTextSize="500sp"
+        android:textAllCaps="true"
+        android:textColor="#131211"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sometv" />
+
+    <ImageView
+
+        android:id="@+id/productImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nameTV"
+        tools:srcCompat="@tools:sample/avatars"
+        android:adjustViewBounds="true"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        app:layout_constraintBottom_toTopOf="@id/fullnameTV"/>
+
+    <TextView
+        android:id="@+id/fullnameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:text="Fullname"
+        android:textAllCaps="true"
+        android:textColor="#F2695F"
+        android:fontFamily="@font/alegreyabolditalic"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+    <View
+        android:id="@+id/vector_2"
+        android:layout_width="50dp"
+        android:layout_height="3dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:background="#F2695F"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullnameTV" />
+
+    <TextView
+        android:id="@+id/descriptionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewEnd"
+        android:layout_marginEnd="40dp"
+        android:maxWidth="200dp"
+        android:fontFamily="@font/alegreyabolditalic"
+        android:inputType="textMultiLine"
+        android:maxLines="4"
+        android:paddingTop="15dp"
+        android:text="Нуописание"
+        android:textAllCaps="true"
+        android:textColor="#939393"
+        android:textSize="15dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/vector_2" />
+    <Button
+        android:id="@+id/someButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttons"
+        android:textAllCaps="true"
+
+
+        android:text="Купить"
+        android:fontFamily="@font/alegreyabolditalic"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="40dp"></Button>
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/alegreyabolditalic"
+        android:text="Редактировать"
+        android:onClick="GoToEdit"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/someButton">
+
+    </Button>
+</androidx.constraintlayout.widget.ConstraintLayout>
